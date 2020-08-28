@@ -3,78 +3,82 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="user-inputviewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
     integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
   <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css" />
   <link rel="stylesheet" href="./assets/css/style.css" />
   <title>Work Day Scheduler</title>
 </head>
 
 <body>
   <header class="jumbotron">
+    <p id="year" class="display-2"></p>
     <h1 class="display-3">Work Day Scheduler</h1>
     <p class="lead">A simple calendar app for scheduling your work day</p>
-    <p id="currentDay" class="lead"></p>
+    <p id="currentDay" class="h1"></p>
+    <!-- <input type="time" id="time"> -->
+    <p id="time" class="h2"></p>
   </header>
 
   <main class="container col-12 d-flex flex-column">
 
     <!-- Timeblocks go here -->
     <div class="time-block row col-12 m-1">
-      <div class="col-1 hour text-right pt-3">9AM</div>
-      <textarea id="slot0" class="user-input col-10 pt-3" name="" id="" cols="30" rows="10">Jog</textarea>
-      <span id="saveBtn0" class="col-1 saveBtn">save</span>
+      <span id="9" class="col-1 hour text-right pt-3">9 AM</span>
+      <label for="textarea"></label><textarea id="textarea1" class="user-input col-10 pt-3" name="user-input"  cols="30" rows="10" placeholder="Click here to input text."></textarea>
+      <span id="saveBtn0" class="col-1 saveBtn"><span class="display-4 oi oi-hard-drive d-block mt-5 mb-2 ml-1"></span>SAVE</span>
     </div>
 
     <div class="time-block row col-12 m-1">
-      <span class="col-1 hour text-right pt-3"> 10AM</span>
-      <textarea id="slot1" class="user-input col-10 pt-3" name="" id="" cols=" 30" rows="10">Hike</textarea>
-      <span id="saveBtn1" class="col-1 saveBtn">save</span>
+      <span id="10" class="col-1 hour text-right pt-3"> 10 AM</span>
+      <label for="textarea"></label><textarea id="textarea2" class="user-input col-10 pt-3" name="user-input"  cols=" 30" rows="10"></textarea>
+      <span id="saveBtn1" class="col-1 saveBtn"><span class="display-4 oi oi-hard-drive d-block mt-5 mb-2 ml-1"></span>SAVE</span>
     </div>
 
     <div class="time-block row col-12 m-1">
-      <span class="col-1 hour text-right pt-3"> 11AM</span>
-      <textarea id="slot2" class="user-input col-10 pt-3" name="" id="" cols="30" rows="10" class="w-90">Lunch with Jane</textarea>
-      <span id="saveBtn2" class="col-1 saveBtn">save</span>
+      <span id="11" class="col-1 hour text-right pt-3"> 11 AM</span>
+      <label for="textarea"></label><textarea id="textarea3" class="user-input col-10 pt-3" name="user-input"  cols="30" rows="10" class="w-90"></textarea>
+      <span id="saveBtn2" class="col-1 saveBtn"><span class="display-4 oi oi-hard-drive d-block mt-5 mb-2 ml-1"></span>SAVE</span>
     </div>
 
     <div class="time-block row col-12 m-1">
-      <span class="col-1 hour text-right pt-3"> 12AM</span>
-      <textarea id="slot3" class="user-input col-10 pt-3" name="" id="" cols="30" rows="10">Sleep</textarea>
-      <span id="saveBtn3" class="col-1 saveBtn">save</span>
+      <span id="12" class="col-1 hour text-right pt-3"> 12 PM</span>
+      <label for="textarea"></label><textarea id="textarea4" class="user-input col-10 pt-3" name="user-input"  cols="30" rows="10"></textarea>
+      <span id="saveBtn3" class="col-1 saveBtn"><span class="display-4 oi oi-hard-drive d-block mt-5 mb-2 ml-1"></span>SAVE</span>
     </div>
 
     <div class="time-block row col-12 m-1">
-      <span class="col-1 hour text-right pt-3"> 1PM</span>
-      <textarea id="slot4" class="user-input col-10 pt-3" name="" id="" cols="30" rows="10">Code</textarea>
-      <span id="saveBtn4" class="col-1 saveBtn">save</span>
+      <span id="13" class="col-1 hour text-right pt-3"> 1 PM</span>
+      <label for="textarea"></label><textarea id="textarea5" class="user-input col-10 pt-3" name="user-input"  cols="30" rows="10"></textarea>
+      <span id="saveBtn4" class="col-1 saveBtn"><span class="display-4 oi oi-hard-drive d-block mt-5 mb-2 ml-1"></span>SAVE</span>
     </div>
 
     <div class="time-block row col-12 m-1">
-      <span class="col-1 hour text-right pt-3"> 2PM</span>
-      <textarea id="slot5" class="user-input col-10 pt-3" name="" id="" cols="30" rows="10">Rehearse</textarea>
-      <span id="saveBtn5" class="col-1 saveBtn">save</span>
+      <span id="14" class="col-1 hour text-right pt-3"> 2 PM</span>
+      <label for="textarea"></label><textarea id="textarea6" class="user-input col-10 pt-3" name="user-input"  cols="30" rows="10"></textarea>
+      <span id="saveBtn5" class="col-1 saveBtn"><span class="display-4 oi oi-hard-drive d-block mt-5 mb-2 ml-1"></span>SAVE</span>
     </div>
 
     <div class="time-block row col-12 m-1">
-      <span class="col-1 hour text-right pt-3"> 3PM</span>
-      <textarea id="slot6" class="user-input col-10 pt-3" name="" id="" cols="30" rows="10">Study</textarea>
-      <span id="saveBtn6" class="col-1 saveBtn">save</span>
+      <span id="15" class="col-1 hour text-right pt-3"> 3 PM</span>
+      <label for="textarea"></label><textarea id="textarea7" class="user-input col-10 pt-3" name="user-input"  cols="30" rows="10"></textarea>
+      <span id="saveBtn6" class="col-1 saveBtn"><span class="display-4 oi oi-hard-drive d-block mt-5 mb-2 ml-1"></span>SAVE</span>
     </div>
 
     <div class="time-block row col-12 m-1">
-      <span class="col-1 hour text-right pt-3"> 4PM</span>
-      <textarea id="slot7" class="user-input col-10 pt-3" name="" id="" cols="30" rows="10">Play</textarea>
-      <span id="saveBtn7" class="col-1 saveBtn">save</span>
+      <span id="16" class="col-1 hour text-right pt-3"> 4 PM</span>
+      <label for="textarea"></label><textarea id="textarea8" class="user-input col-10 pt-3" name="user-input"  cols="30" rows="10"></textarea>
+      <span id="saveBtn7" class="col-1 saveBtn"><span class="display-4 oi oi-hard-drive d-block mt-5 mb-2 ml-1"></span>SAVE</span>
     </div>
 
     <div class="time-block row col-12 m-1">
-      <span class="col-1 hour text-right pt-3"> 5PM</span>
-      <textarea id="slot8" class="user-input col-10 pt-3" name="" id="" cols="30" rows="10">Jog</textarea>
-      <span id="saveBtn8" class="col-1 saveBtn">save</span>
+      <span id="17" class="col-1 hour text-right pt-3"> 5 PM</span>
+      <label for="textarea"></label><textarea id="textarea9" class="user-input col-10 pt-3" name="user-input"  cols="30" rows="10"></textarea>
+      <span id="saveBtn8" class="col-1 saveBtn"><span class="display-4 oi oi-hard-drive d-block mt-5 mb-2 ml-1"></span>SAVE</span>
     </div>
 
   </main>
