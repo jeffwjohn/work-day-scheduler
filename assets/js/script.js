@@ -28,119 +28,48 @@ $("#time").text(moment().format('hh:mm a'));
 
 //     saveBtn.addEventListener("click", saveEntry);
 // })
+// var checkStorage = function () {
+//     for (i = 0; i < 9; i++) {
+//         localStorage.getItem($("#saveBtn")
+//     }
 
+// }
 
 // SAVE USER INPUT TO LOCAL STORAGE
 $(".saveBtn").click(function (event) {
     localStorage.setItem($(this).attr("id"), $(this).siblings(".user-input").val());
 
 })
-// 
-// window.onload = function () {
-//     // alert("welcome");
-//     // var textArea = $("#textarea");
-//     //         if ($.trim(textArea.val()) == '') {
-//             for (i = 0; i < 9; i++) {
-//                 $("#saveBtn" + i).val(localStorage.getItem("saveBtn" + i));
 
-//             }
-
-//             function saveEntry() {
-//                 for (var i = 0; i < 9; i++) {
-//                    localStorage.setItem($(this).attr("id"), $(this).siblings(".user-input").val());
-
-//                    var list = JSON.parse(localStorage.getItem($(this).attr("id")) || [];
-
-//                     console.log(list);
+$("#div1 .user-input").val(localStorage.getItem("saveBtn0"));
+$("#div2 .user-input").val(localStorage.getItem("saveBtn1"));
+$("#div3 .user-input").val(localStorage.getItem("saveBtn2"));
+$("#div4 .user-input").val(localStorage.getItem("saveBtn3"));
+$("#div5 .user-input").val(localStorage.getItem("saveBtn4"));
+$("#div6 .user-input").val(localStorage.getItem("saveBtn5"));
+$("#div7 .user-input").val(localStorage.getItem("saveBtn6"));
+$("#div8 .user-input").val(localStorage.getItem("saveBtn7"));
+$("#div9 .user-input").val(localStorage.getItem("saveBtn8"));
 
 
-//                     // var userInput = $(".user-input").val(storedItem).val();
-
-
-//                     // console.log(textArea.attr("id"));
-//                 }
-//                 console.log(list);
-//             };
-//              saveEntry();
-
-//       };
-
-
-//         // var textArea = $("#textarea");
-//         // if ($.trim(textArea.val()) == '') {
-//         for (i = 0; i < 9; i++) {
-//             $("#saveBtn" + i).val(localStorage.getItem("saveBtn" + i));
-
-//         }
-
-//         function saveEntry() {
-//             for (var i = 0; i < 9; i++) {
-//                 localStorage.setItem($(this).attr("id"), $(this).siblings(".user-input").val());
-
-
-
-
-// var userInput = $(".user-input").val(storedItem).val();
-
-
-// console.log(textArea.attr("id"));
-//         }
-
-//     };
-//     saveEntry();
-// })
-// var storedItem = localStorage.getItem(textArea.attr("id"), $(this).siblings(".user-input").val());
-// textArea.val(storedItem); $(".user-input").val(storedItem);
-
-// var list1 = JSON.parse(localStorage.getItem('entry1')) || [];
-// var list2 = JSON.parse(localStorage.getItem('entry2')) || [];
-// var list3 = JSON.parse(localStorage.getItem('entry3')) || [];
-// var list4 = JSON.parse(localStorage.getItem('entry4')) || [];
-// var list5 = JSON.parse(localStorage.getItem('entry5')) || [];
-// var list6 = JSON.parse(localStorage.getItem('entry6')) || [];
-// var list7 = JSON.parse(localStorage.getItem('entry7')) || [];
-// var list8 = JSON.parse(localStorage.getItem('entry8')) || [];
-// var list9 = JSON.parse(localStorage.getItem('entry9')) || [];
-
-// function renderEntries(list1) {
-//     for (var i = 0; i < list1.length; i++) {
-//         var hourBar1 = $('#textarea1');
-//         hourBar1.text(list1[i]);
-//     }
-// }
-
-// var userEntry1 = $('#textarea1').val().trim();
-
-// list1.push(userEntry1);
-
-// renderEntries(list1);
-
-// localStorage.setItem('entry1', JSON.stringify(list1));
 var textArea = $(".user-input");
 var now = moment().format('h A');
 var time = $(".hour").text();
-var hourBlocks = document.getElementsByClassName("hour"); 
+var hourBlocks = document.getElementsByClassName("hour");
 var currentHour = parseInt(moment().format('H'));
 
 
 function changeColor() {
     for (i = 0; i < 9; i++)
-    if  (hourBlocks[i].id  < currentHour) {
-        $(hourBlocks[i]).siblings(".user-input").addClass('bg-secondary');
+        if (hourBlocks[i].id < currentHour) {
+            $(hourBlocks[i]).siblings(".user-input").addClass('bg-secondary');
 
-    } else if (hourBlocks[i].id == currentHour) {
+        } else if (hourBlocks[i].id == currentHour) {
         $(hourBlocks[i]).siblings(".user-input").addClass('bg-danger');
 
     } else if (hourBlocks[i].id > currentHour) {
-        $(hourBlocks[i]).siblings(".user-input").addClass('bg-success');   
+        $(hourBlocks[i]).siblings(".user-input").addClass('bg-success');
     }
 }
 
 changeColor();
-
-
-console.log(now);
-console.log(time);
-console.log(currentHour);
-console.log(hourBlocks[8].id);
-console.log(hourBlocks[0])
