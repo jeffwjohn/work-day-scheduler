@@ -43,26 +43,3 @@ function changeColor() {
 
 changeColor();
 
-// ONE BUTTON SAVES ALL INPUTS
-// $(document).ready(function () {
-
-//     var saveBtn = document.querySelector(".saveBtn");
-
-//     for (var i = 0; i < 9; i++) {
-//         $("#slot" + i).val(localStorage.getItem("slot" + i));
-//     }
-
-//     function saveEntry() {
-//         for (var i = 0; i < 9; i++) {
-//             localStorage.setItem("slot" + i, $("#slot" + i).val());
-//         }
-//     };
-
-//     saveBtn.addEventListener("click", saveEntry);
-// })
-// var checkStorage = function () {
-//     for (i = 0; i < 9; i++) {
-//         localStorage.getItem($("#saveBtn")
-//     }
-
-// }
