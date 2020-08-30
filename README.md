@@ -9,6 +9,7 @@ An online schedule manager.
 * Bootstrap
 * JavaScript
 * jQuery
+* Moment.js
 
 ![Screenshot](assets/images/screenshot.png)
 
