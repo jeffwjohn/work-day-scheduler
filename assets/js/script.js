@@ -1,8 +1,11 @@
 
 // DISPLAY CURRENT DATE IN HEADER
-$("#year").text(moment().format('YYYY'));
-$("#currentDay").text(moment().format('dddd, MMMM DD'));
-$("#time").text(moment().format('hh:mm a'));
+var showTime = function () {
+    $("#year").text(moment().format('YYYY'));
+    $("#currentDay").text(moment().format('dddd, MMMM DD'));
+    $("#time").text(moment().format('hh:mm a'));
+}
+setInterval(showTime, 1000); 
 
 // SAVE USER INPUT TO LOCAL STORAGE
 $(".saveBtn").click(function (event) {
@@ -41,5 +44,6 @@ function changeColor() {
     }
 }
 
+showTime();
 changeColor();
 
